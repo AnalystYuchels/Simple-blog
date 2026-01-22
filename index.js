@@ -31,6 +31,18 @@ app.post("/posts", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/posts/:id/edit", (req, res) => {
+  const post = posts.find(p => p.id === Number(req.params.id));
+  res.render("edit", { post });
+});
+
+app.post("/posts/:id/update", (req, res) => {
+  const post = posts.find(p => p.id === Number(req.params.id));
+  post.title = req.body.title;
+  post.content = req.body.content;
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
 });
