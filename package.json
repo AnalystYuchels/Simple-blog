@@ -11,11 +11,15 @@
     "url": "git+https://github.com/AnalystYuchels/Simple-blog.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "yuchels",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/AnalystYuchels/Simple-blog/issues"
   },
-  "homepage": "https://github.com/AnalystYuchels/Simple-blog#readme"
+  "homepage": "https://github.com/AnalystYuchels/Simple-blog#readme",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
 }
