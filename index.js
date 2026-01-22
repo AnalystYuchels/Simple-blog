@@ -14,6 +14,23 @@ app.get("/", (req,res) => {
   res.render("index", { posts });
 });
 
+app.get("/new", (req, res) => {
+  res.render("new");
+});
+
+app.post("/posts", (req, res) => {
+  const { title, content } = req.body;
+
+  posts.push({
+    id: idCounter++,
+    title,
+    content,
+    createdAt: new Date()
+  });
+
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
 });
