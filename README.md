@@ -53,28 +53,25 @@ If you understand this project deeply, scaling it later becomes trivial.
 
 ## 📁 Project Structure
 
-| Path / File              | Purpose                                                                 |
-|--------------------------|-------------------------------------------------------------------------|
-| project-root/            | Root directory of the application                                       |
-| ├── index.js             | Application entry point, Express server setup                           |
-| ├── package.json         | Project metadata, scripts, and dependencies                             |
-| ├── package-lock.json    | Locked dependency versions                                              |
-| ├── README.md            | Project documentation                                                   |
-| ├── /public              | Static assets served by Express                                         |
-| │   ├── /css              | Application-wide stylesheets                                            |
-| │   │   └── styles.css    | Global styles, layout, typography, spacing                              |
-| │   └── /images           | Static images (if any)                                                  |
-| ├── /views               | EJS templates                                                           |
-| │   ├── /partials        | Reusable layout components                                              |
-| │   │   ├── header.ejs   | Page header and navigation                                              |
-| │   │   └── footer.ejs   | Page footer                                                             |
-| │   ├── index.ejs        | List all blog posts                                                     |
-| │   ├── new.ejs          | Form to create a new post                                               |
-| │   ├── show.ejs         | Display a single post                                                   |
-| │   ├── edit.ejs         | Edit an existing post                                                   |
-| │   ├── error.ejs        | Error page (404 / server errors)                                        |
-| └── /data                | Application data layer                                                  |
-|     └── posts.js         | In-memory post storage and helpers                                     |
+simple-blog/
+├── index.js
+├── package.json
+├── package-lock.json
+├── README.md
+│
+├── public/
+│   └── css/
+│       └── styles.css
+│
+└── views/
+    ├── partials/
+    │   ├── header.ejs
+    │   └── footer.ejs
+    │
+    ├── index.ejs
+    ├── new.ejs
+    └── edit.ejs
+
 
 ---
 
@@ -104,6 +101,7 @@ node index.js
 Visit:
 http://localhost:3000
 
+---
 
 ## 🔁 Available Routes
 | Method | Route                    | Description                                   |
@@ -118,6 +116,7 @@ http://localhost:3000
 | POST   | /posts/:id/delete        | Delete a post                                 |
 | GET    | *                        | Render 404 error page                         |
 
+---
 
 ## 🎨 Design & Styling Notes
 - Serif typography for long-form readability
@@ -130,6 +129,7 @@ http://localhost:3000
 
 - No UI frameworks — pure CSS for control and clarity
 
+---
 
 ## 🧪 Error Handling
 - Invalid post IDs return a 404 response
@@ -138,6 +138,7 @@ http://localhost:3000
 
 - Routes fail gracefully instead of crashing the app
 
+---
 
 ## 🔮 Possible Future Improvements
 - Database persistence (MongoDB / PostgreSQL)
