@@ -14,12 +14,12 @@ let idCounter = 1;
 
 // Home - view all posts
 app.get("/", (req,res) => {
-  res.render("index", { posts });
+  res.render("index", { title: "Home" });
 });
 
 // New post form
 app.get("/new", (req, res) => {
-  res.render("new");
+  res.render("new", { title: "Create Post"});
 });
 
 // Create post
@@ -48,7 +48,7 @@ app.get("/posts/:id/edit", (req, res) => {
     return res.status(404).send("Post not found.");
   }
 
-  res.render("edit", { post });
+  res.render("edit", { title: "Edit Post", post });
 });
 
 // Update post
