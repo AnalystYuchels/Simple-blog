@@ -53,6 +53,7 @@ If you understand this project deeply, scaling it later becomes trivial.
 
 ## 📁 Project Structure
 
+```txt
 simple-blog/
 ├── index.js
 ├── package.json
@@ -71,7 +72,6 @@ simple-blog/
     ├── index.ejs
     ├── new.ejs
     └── edit.ejs
-
 
 ---
 
