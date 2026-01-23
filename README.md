@@ -53,20 +53,28 @@ If you understand this project deeply, scaling it later becomes trivial.
 
 ## 📁 Project Structure
 
-simple-blog/
-├── index.js # Application entry point
-├── views/
-│ ├── index.ejs # Home / view posts
-│ ├── new.ejs # Create post form
-│ ├── edit.ejs # Edit post form
-│ └── partials/
-│ ├── header.ejs # Shared page header
-│ └── footer.ejs # Shared page footer
-├── public/
-│ └── css/
-│ └── styles.css # Global styles
-├── README.md
-└── package.json
+| Path / File              | Purpose                                                                 |
+|--------------------------|-------------------------------------------------------------------------|
+| project-root/            | Root directory of the application                                       |
+| ├── index.js             | Application entry point, Express server setup                           |
+| ├── package.json         | Project metadata, scripts, and dependencies                             |
+| ├── package-lock.json    | Locked dependency versions                                              |
+| ├── README.md            | Project documentation                                                   |
+| ├── /public              | Static assets served by Express                                         |
+| │   ├── /css              | Application-wide stylesheets                                            |
+| │   │   └── styles.css    | Global styles, layout, typography, spacing                              |
+| │   └── /images           | Static images (if any)                                                  |
+| ├── /views               | EJS templates                                                           |
+| │   ├── /partials        | Reusable layout components                                              |
+| │   │   ├── header.ejs   | Page header and navigation                                              |
+| │   │   └── footer.ejs   | Page footer                                                             |
+| │   ├── index.ejs        | List all blog posts                                                     |
+| │   ├── new.ejs          | Form to create a new post                                               |
+| │   ├── show.ejs         | Display a single post                                                   |
+| │   ├── edit.ejs         | Edit an existing post                                                   |
+| │   ├── error.ejs        | Error page (404 / server errors)                                        |
+| └── /data                | Application data layer                                                  |
+|     └── posts.js         | In-memory post storage and helpers                                     |
 
 ---
 
@@ -77,15 +85,23 @@ simple-blog/
 ```bash
 git clone https://github.com/YOUR_USERNAME/simple-blog.git
 cd simple-blog
-2. Install dependencies
-npm install
-3. Start the server
-node index.js
-4. Open the app
 ```
 
-Visit:
+### 2. Install dependencies
 
+```bash
+npm install
+```
+
+### 3. Start the server
+
+```bash
+node index.js
+```
+
+### 4. Open the app
+
+Visit:
 http://localhost:3000
 
 
