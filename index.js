@@ -14,7 +14,10 @@ let idCounter = 1;
 
 // Home - view all posts
 app.get("/", (req,res) => {
-  res.render("index", { title: "Home" });
+  res.render("index", {
+    title: "Home",
+    posts: posts
+  });
 });
 
 // New post form
