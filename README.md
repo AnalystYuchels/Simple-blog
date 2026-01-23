@@ -72,6 +72,7 @@ simple-blog/
     ├── index.ejs
     ├── new.ejs
     └── edit.ejs
+```
 
 ---
 
