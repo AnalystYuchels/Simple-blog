@@ -10,7 +10,7 @@
         <p><%= post.content %></p>
 
         <div class="post-actions">
-          <a href="/edit/<%= post.id %>/edit">Edit</a>
+          <a href="/edit/<%= post.id %>/edit" class="btn edit">Edit</a>
 
           <form action="/post/<%= post.id %>/delete" method="post">
             <button type="submit">Delete</button>
