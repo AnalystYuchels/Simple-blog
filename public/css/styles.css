@@ -142,6 +142,7 @@ textarea:focus {
 
 button:hover {
   background: #3730a3;
+  color: #fff;
 }
 
 button.danger {
