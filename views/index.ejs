@@ -1,5 +1,5 @@
 <%- include("partials/header", { title: "Home" }) %>
-
+  <section class="posts">
     <% if (!posts || posts.length === 0) { %>
       <p class="empty">No posts yet. Start writing.</p>
     <% } %>
@@ -9,14 +9,15 @@
         <h2><%= post.title %></h2>
         <p><%= post.content %></p>
 
-        <div class="actions">
-          <a href="/posts/<%= post.id %>/edit">Edit</a>
+        <div class="post-actions">
+          <a href="/edit/<%= post.id %>/edit">Edit</a>
 
-          <form action="/posts/<%= post.id %>/delete" method="post">
+          <form action="/post/<%= post.id %>/delete" method="post">
             <button type="submit">Delete</button>
           </form>
         </div>
       </article>
     <% }) %>
+  </section>
 
 <%- include("partials/footer") %>

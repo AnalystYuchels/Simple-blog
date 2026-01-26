@@ -1,15 +1,19 @@
 <%- include("partials/header") %>
   
-  <h2>Write a new post</h2>
+  <section class="form-page">
+    <h2>Write a new post</h2>
 
-  <form action="/posts" method="post">
-    <input type="text" name="title" placeholder="Post Title" required>
+    <form action="/posts" method="post">
+      <label for="title">Title</label>
+      <input type="text" name="title" required>
 
-    <textarea name="content" rows="8" placeholder="Write your thoughts..." required></textarea>
+      <label for="content">Content</label>
+      <textarea name="content" rows="6" required></textarea>
 
-    <button type="submit">Publish</button>
-  </form>
+      <button type="submit">Publish</button>
+    </form>
 
-  <a href="/">← Back to posts</a>
+    <a href="/">← Back to posts</a>
+  </section>
   
 <%- include("partials/footer") %>
